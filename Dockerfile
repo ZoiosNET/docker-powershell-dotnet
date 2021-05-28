@@ -4,7 +4,7 @@ LABEL maintainer="ZoiosNET<management@zoios.net>"
 
 RUN echo "Prepare"
 RUN apt-get update
-RUN apt-get install -y wget apt-transport-https software-properties-common
+RUN apt-get install -y wget apt-transport-https software-properties-common git
 
 RUN echo "Install PowerShell"
 RUN wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
