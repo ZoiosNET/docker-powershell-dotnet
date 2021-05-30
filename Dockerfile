@@ -2,6 +2,10 @@ FROM ubuntu
 
 LABEL maintainer="ZoiosNET<management@zoios.net>"
 
+RUN echo "Set Timezone"
+ENV TZ=Europe/Berlin
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 RUN echo "Prepare"
 RUN apt-get update
 RUN apt-get install -y wget apt-transport-https software-properties-common git
